@@ -8,13 +8,8 @@ import logging
 
 logger = logging.getLogger(__name__)
 intents = disnake.Intents.all()
-activity = disnake.Activity(
-    name="Flonium",
-    type=disnake.ActivityType.playing,
-    details="Приватный сервер Minecraft"
-)
 bot = commands.Bot(command_prefix=settings['prefix'], intents=intents,
-                   test_guilds=[1184123739764428880], activity=activity)
+                   test_guilds=[1184123739764428880])
 bot.remove_command('help')
 data = DataBase()
 
